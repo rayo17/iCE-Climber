@@ -10,13 +10,21 @@ import com.badlogic.gdx.Game;
 
 
 public class mainClient extends ApplicationAdapter {
+
+	public static final int WIDTH = 800;
+
+	public static final int HEIGHT = 1000;
+
+	public static final int POSY = 50;
+	public static final int POSX = 500;
+
 	SpriteBatch batch;
 	Texture img;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		img = new Texture("fondo.png");
 	}
 
 	@Override
@@ -29,6 +37,7 @@ public class mainClient extends ApplicationAdapter {
 	
 	@Override
 	public void dispose () {
+		super.dispose();
 		batch.dispose();
 		img.dispose();
 	}

@@ -8,6 +8,12 @@ import com.client.main.mainClient;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
+
+		config.setTitle("ICE CLIMBER LENGUAJES CE");
+		config.setForegroundFPS(60);
+		config.setWindowedMode(mainClient.WIDTH,mainClient.HEIGHT);
+		config.setResizable(false);
+		config.setWindowPosition(mainClient.POSX,mainClient.POSY);
 		new Lwjgl3Application(new mainClient(), config);
 	}
 }
