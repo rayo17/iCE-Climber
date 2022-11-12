@@ -5,6 +5,7 @@ buildscript {
         mavenLocal()
         mavenCentral()
         gradlePluginPortal()
+        maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         google()
     }
@@ -45,8 +46,11 @@ project(":desktop") {
 
     dependencies {
         implementation project(":core")
-        api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+        implementation 'com.google.code.gson:gson:2.8.2'
         
     }
 }
@@ -57,6 +61,8 @@ project(":core") {
 
     dependencies {
         api "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        implementation 'com.google.code.gson:gson:2.8.2'
         
     }
 }

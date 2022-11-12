@@ -1,19 +1,17 @@
 package com.client.main;
 
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
-import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.client.main.mainClient;
 
 // Please note that on macOS your application needs to be started with the -XstartOnFirstThread JVM argument
 public class DesktopLauncher {
 	public static void main (String[] arg) {
-		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-
-		config.setTitle("ICE CLIMBER LENGUAJES CE");
-		config.setForegroundFPS(60);
-		config.setWindowedMode(mainClient.WIDTH,mainClient.HEIGHT);
-		config.setResizable(false);
-		config.setWindowPosition(mainClient.POSX,mainClient.POSY);
-		new Lwjgl3Application(new mainClient(), config);
+		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.foregroundFPS = 60;
+		config.height = mainClient.HEIGHT;
+		config.width = mainClient.WIDTH;
+		config.forceExit = false;
+		new LwjglApplication(new mainClient(), config);
 	}
 }
