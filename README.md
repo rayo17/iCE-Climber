@@ -1,7 +1,7 @@
 # iCE-Climber
 Tarea3-lenguajes
 
-##Referencias
+## Referencias
 https://spritedatabase.net/game/225
 https://www.reddit.com/r/libgdx/comments/g7gmrn/cant_import_texturepacker_into_project/
 https://libgdx.com/wiki/extensions/physics/box2d#initialization
