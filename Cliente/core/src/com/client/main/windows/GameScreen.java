@@ -16,6 +16,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.client.main.mainClient;
+import com.
 //import com.client.main.
 
 import java.io.BufferedReader;
@@ -73,10 +74,10 @@ public class GameScreen implements Screen, Runnable {
 
     //private Pterodactyl teroFinal;
 
-    //private LinkedBlockingQueue<EnemyDef> enemiesToSpawn;
-    //private Array<Enemy> enemies;
-    //public LinkedBlockingQueue<FruitDef> fruitsToSpawn;
-    //private Array<Fruit> fruits;
+    private LinkedBlockingQueue<EnemyDef> enemiesToSpawn;
+    private Array<Enemy> enemigos;
+    public LinkedBlockingQueue<FruitDef> fruitsToSpawn;
+    private Array<Fruit> frutas;
 
     //Connect connect;
 
@@ -105,7 +106,21 @@ public class GameScreen implements Screen, Runnable {
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("mainClient.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1 / mainClient.PPM);
-        
+
+        //coloca la posicion de la camara e inicia algunas variables necesarias para que funcione el juego
+        gameCamera.position.set(gameport.getWorldWidth() / 2, (gameport.getWorldHeight() + 0) / 2, 0);
+
+        world = new World(new Vector2(0, -10), true);
+        b2dr = new Box2DDebugRenderer();
+
+        //Los arrays que contienen a todos los personajes que habra en la pantall, cada uno en su respectiva clase
+        enemigos = new Array<Enemy>();
+        frutas = new Array<Fruit>();
+
+        //Lista de espera para los enemigos que se crearan
+        enemiesToSpawn = new LinkedBlockingQueue<>();
+        fruitsToSpawn = new LinkedBlockingQueue<>();
+        new B2W
 
     }
 }
