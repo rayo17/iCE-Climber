@@ -93,6 +93,19 @@ public class GameScreen implements Screen, Runnable {
         this.host = host;
         this.game = game;
         this.bonus = bonus;
+        //Los atlas se usan para realizar las animaciones de los sprites
+        atlas = new TextureAtlas("Popo_Nana_and_Enemies.pack");
+        fruitAtlas = new TextureAtlas("Fruits.pack");
+        //La gamecamera y el gameport que se utilizan para mostrar el juego
+        gameCamera = new OrthographicCamera();
+        gameport = new FitViewport(mainClient.GWIDTH / mainClient.PPM, mainClient.GHEIGHT /mainClient.PPM, gameCamera);
+        //hud = new Hud(game.batch);
+
+        //inicia el mapa
+        mapLoader = new TmxMapLoader();
+        map = mapLoader.load("mainClient.tmx");
+        renderer = new OrthogonalTiledMapRenderer(map, 1 / mainClient.PPM);
+        
 
     }
 }
