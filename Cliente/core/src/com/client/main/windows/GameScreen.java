@@ -15,8 +15,14 @@ import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.client.main.Apparition.Elements.Fruit;
+import com.client.main.Apparition.Elements.FruitDef;
+import com.client.main.Apparition.Opponents.Opponent;
+import com.client.main.Apparition.Opponents.OpponentDef;
+import com.client.main.Gadgets.B2WorldCreator;
+import com.client.main.Stage.Data;
 import com.client.main.mainClient;
-import com.
+
 //import com.client.main.
 
 import java.io.BufferedReader;
@@ -50,7 +56,7 @@ public class GameScreen implements Screen, Runnable {
 
     private Viewport gameport;
 
-    //private Hud hud;
+    private Data data;
 
     //variables 2d
     private World world;
@@ -74,8 +80,8 @@ public class GameScreen implements Screen, Runnable {
 
     //private Pterodactyl teroFinal;
 
-    private LinkedBlockingQueue<EnemyDef> enemiesToSpawn;
-    private Array<Enemy> enemigos;
+    private LinkedBlockingQueue<OpponentDef> enemiesToSpawn;
+    private Array<Opponent> enemigos;
     public LinkedBlockingQueue<FruitDef> fruitsToSpawn;
     private Array<Fruit> frutas;
 
@@ -100,7 +106,7 @@ public class GameScreen implements Screen, Runnable {
         //La gamecamera y el gameport que se utilizan para mostrar el juego
         gameCamera = new OrthographicCamera();
         gameport = new FitViewport(mainClient.GWIDTH / mainClient.PPM, mainClient.GHEIGHT /mainClient.PPM, gameCamera);
-        //hud = new Hud(game.batch);
+        data = new Data(game.batch);
 
         //inicia el mapa
         mapLoader = new TmxMapLoader();
@@ -114,13 +120,23 @@ public class GameScreen implements Screen, Runnable {
         b2dr = new Box2DDebugRenderer();
 
         //Los arrays que contienen a todos los personajes que habra en la pantall, cada uno en su respectiva clase
-        enemigos = new Array<Enemy>();
+        enemigos = new Array<Opponent>();
         frutas = new Array<Fruit>();
 
         //Lista de espera para los enemigos que se crearan
         enemiesToSpawn = new LinkedBlockingQueue<>();
         fruitsToSpawn = new LinkedBlockingQueue<>();
-        new B2W
+
+
+    }
+
+    public void dispose() {
+        map.dispose();
+        renderer.dispose();
+        world.dispose();
+        b2dr.dispose();
+        data.dispose();
+        game.batch.dispose();
 
     }
 }
