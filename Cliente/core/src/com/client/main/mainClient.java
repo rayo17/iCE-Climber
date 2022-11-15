@@ -7,10 +7,15 @@ import com.client.main.windows.menuScreen;
 
 
 public class mainClient extends Game {
-
+	//Dimensiones de la ventana principal
 	public static final int WIDTH = 800;
 
 	public static final int HEIGHT = 1000;
+
+	//Dimenciones de la ventana de juego
+	public static final int GWIDTH = 300;
+
+	public static final int GHEIGHT = 500;
 
 	public static final int POSY = 50;
 	public static final int POSX = 500;

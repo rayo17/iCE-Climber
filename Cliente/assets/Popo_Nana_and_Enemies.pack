@@ -1,0 +1,82 @@
+
+Popo_Nana_and_Enemies.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+tero_left
+  rotate: false
+  xy: 1, 43
+  size: 106, 20
+  orig: 106, 20
+  offset: 0, 0
+  index: -1
+nana_jump_left
+  rotate: false
+  xy: 1, 16
+  size: 94, 25
+  orig: 94, 25
+  offset: 0, 0
+  index: -1
+popo_jump_left
+  rotate: false
+  xy: 109, 38
+  size: 94, 25
+  orig: 94, 25
+  offset: 0, 0
+  index: -1
+bear_left
+  rotate: false
+  xy: 97, 1
+  size: 80, 35
+  orig: 80, 35
+  offset: 0, 0
+  index: -1
+popo_hammer_left
+  rotate: false
+  xy: 205, 34
+  size: 78, 29
+  orig: 78, 29
+  offset: 0, 0
+  index: -1
+nana_hammer_left
+  rotate: false
+  xy: 285, 34
+  size: 75, 29
+  orig: 75, 29
+  offset: 0, 0
+  index: -1
+popo_walk_left
+  rotate: false
+  xy: 362, 38
+  size: 75, 25
+  orig: 75, 25
+  offset: 0, 0
+  index: -1
+bird_left
+  rotate: false
+  xy: 439, 44
+  size: 64, 19
+  orig: 64, 19
+  offset: 0, 0
+  index: -1
+nana_walk_left
+  rotate: false
+  xy: 362, 13
+  size: 75, 23
+  orig: 75, 23
+  offset: 0, 0
+  index: -1
+yeti_left
+  rotate: false
+  xy: 179, 11
+  size: 79, 21
+  orig: 79, 21
+  offset: 0, 0
+  index: -1
+seal_left
+  rotate: false
+  xy: 260, 11
+  size: 78, 21
+  orig: 78, 21
+  offset: 0, 0
+  index: -1
