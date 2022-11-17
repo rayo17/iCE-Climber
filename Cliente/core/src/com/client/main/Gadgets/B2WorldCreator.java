@@ -1,4 +1,4 @@
-package com.client.main.Sprites.Gadgets;
+package com.client.main.Gadgets;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
