@@ -1,10 +1,6 @@
 package com.client.main.windows;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -15,19 +11,15 @@ import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.client.main.Apparition.Elements.Fruit;
-import com.client.main.Apparition.Elements.FruitDef;
+import com.client.main.Sprites.Elements.Fruit;
+import com.client.main.Sprites.Elements.FruitDef;
 import com.client.main.Apparition.Opponents.Opponent;
 import com.client.main.Apparition.Opponents.OpponentDef;
-import com.client.main.Gadgets.B2WorldCreator;
 import com.client.main.Stage.Data;
 import com.client.main.mainClient;
 
 //import com.client.main.
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**

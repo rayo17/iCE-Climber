@@ -13,9 +13,9 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.client.main.mainClient;
 import com.client.main.windows.menuScreen;
 import com.client.main.Apparition.Opponents.*;
-import com.client.main.Apparition.Elements.Carrot;
-import com.client.main.Apparition.Elements.Onion;
-import com.client.main.Apparition.Elements.Pumpkin;
+import com.client.main.Sprites.Elements.Carrot;
+import com.client.main.Sprites.Elements.Onion;
+import com.client.main.Sprites.Elements.Pumpkin;
 import com.client.main.Apparition.Objects.Brick;
 
 
