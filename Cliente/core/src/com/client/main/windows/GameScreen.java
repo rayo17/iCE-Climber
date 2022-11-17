@@ -123,6 +123,20 @@ public class GameScreen implements Screen, Runnable {
     }
 
 
+    /**
+     * Retorna el atlas de los personajes
+     */
+    public TextureAtlas getAtlas() {
+        return atlas;
+    }
+
+    /**
+     * Retorna el atlas de las frutas
+     */
+    public TextureAtlas getFruitAtlas() {
+        return fruitAtlas;
+    }
+
     public void resize(int width, int height) {
         gameport.update(width, height);
     }
