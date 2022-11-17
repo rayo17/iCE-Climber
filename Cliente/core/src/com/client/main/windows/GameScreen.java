@@ -13,8 +13,8 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.client.main.Sprites.Elements.Fruit;
 import com.client.main.Sprites.Elements.FruitDef;
-import com.client.main.Apparition.Opponents.Opponent;
-import com.client.main.Apparition.Opponents.OpponentDef;
+import com.client.main.Sprites.Enemies.Enemy;
+//import com.client.main.Sprites.Enemies.EnemyDef;
 import com.client.main.Stage.Data;
 import com.client.main.mainClient;
 
@@ -73,7 +73,7 @@ public class GameScreen implements Screen, Runnable {
     //private Pterodactyl teroFinal;
 
     private LinkedBlockingQueue<OpponentDef> enemiesToSpawn;
-    private Array<Opponent> enemigos;
+    private Array<Enemy> enemigos;
     public LinkedBlockingQueue<FruitDef> fruitsToSpawn;
     private Array<Fruit> frutas;
 
@@ -112,7 +112,7 @@ public class GameScreen implements Screen, Runnable {
         b2dr = new Box2DDebugRenderer();
 
         //Los arrays que contienen a todos los personajes que habra en la pantall, cada uno en su respectiva clase
-        enemigos = new Array<Opponent>();
+        enemigos = new Array<Enemy>();
         frutas = new Array<Fruit>();
 
         //Lista de espera para los enemigos que se crearan
@@ -122,6 +122,19 @@ public class GameScreen implements Screen, Runnable {
 
     }
 
+
+    public void resize(int width, int height) {
+        gameport.update(width, height);
+    }
+
+
+    public TiledMap getMap() {
+        return map;
+    }
+
+    public World getWorld() {
+        return world;
+    }
     public void dispose() {
         map.dispose();
         renderer.dispose();
