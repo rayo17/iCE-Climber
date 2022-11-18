@@ -32,11 +32,11 @@ public abstract class Fruit extends Sprite{
         setBounds(getX(), getY(), 16 / mainClient.PPM, 16 / mainClient.PPM );
         toDestroy = false;
         destroyed = false;
-        defineFruit();
+        defFruit();
 
     }
 
-    public abstract void defineFruit();
+    public abstract void defFruit();
     public abstract void use(boolean Popo);
 
     /**
