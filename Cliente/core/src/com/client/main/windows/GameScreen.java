@@ -15,7 +15,7 @@ import com.client.main.Sprites.Elements.Fruit;
 import com.client.main.Sprites.Elements.FruitDef;
 import com.client.main.Sprites.Enemies.Enemy;
 //import com.client.main.Sprites.Enemies.EnemyDef;
-import com.client.main.Stage.Data;
+import com.client.main.hud.Hud;
 import com.client.main.mainClient;
 
 //import com.client.main.
@@ -48,7 +48,7 @@ public class GameScreen implements Screen, Runnable {
 
     private Viewport gameport;
 
-    private Data data;
+    private Hud data;
 
     //variables 2d
     private World world;
@@ -98,7 +98,7 @@ public class GameScreen implements Screen, Runnable {
         //La gamecamera y el gameport que se utilizan para mostrar el juego
         gameCamera = new OrthographicCamera();
         gameport = new FitViewport(mainClient.GWIDTH / mainClient.PPM, mainClient.GHEIGHT /mainClient.PPM, gameCamera);
-        data = new Data(game.batch);
+        data = new Hud(game.batch);
 
         //inicia el mapa
         mapLoader = new TmxMapLoader();
