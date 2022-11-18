@@ -9,8 +9,14 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
+import com.client.main.Sprites.Elements.Banano;
+import com.client.main.Sprites.Elements.Berenjenas;
+import com.client.main.Sprites.Elements.Lechugas;
+import com.client.main.Sprites.Elements.Naranja;
 import com.client.main.Sprites.Enemies.Foca;
 import com.client.main.Sprites.Enemies.Pajaro;
+import com.client.main.Sprites.Enemies.Hielo;
+import com.client.main.Sprites.Enemies.Yeti;
 import com.client.main.mainClient;
 import com.client.main.windows.menuScreen;
 
@@ -23,86 +29,88 @@ public class Hud implements Disposable {
     private Viewport viewport;
 
 
-    private static int popoScore;
-    private static int nanaScore;
-    private static int popoLives;
-    private static int nanaLives;
-    public static int pumpkinScore;
-    public static int onionScore;
-    public static int carrotScore;
-    public static int birdScore;
-    public static int bearScore;
-    public static int yetiScore;
-    public static int sealScore;
-    public static int teroScore;
-    public static int pumpkinScore2;
-    public static int onionScore2;
-    public static int carrotScore2;
-    public static int birdScore2;
-    public static int bearScore2;
-    public static int yetiScore2;
-    public static int sealScore2;
-    public static int teroScore2;
-    public static int brickScore;
-    public static int brickScore2;
+    private static int Popo_Score;
+    private static int Nana_Score;
+    private static int Popo_Lives;
+    private static int Nana_Lives;
+    public static int Lechuga_Score;
+    public static int Naranja_Score;
+    public static int Banano_Score;
+    public static int Berenjena_Score;
+    public static int Pajaro_Score;
+    public static int Foca_Score;
+    public static int Yeti_Score;
+    public static int Hielo_Score;
+    public static int Lechuga_Score2;
+    public static int Naranja_Score2;
+    public static int Banano_Score2;
+    public static int Berenjena_Score2;
+    public static int Pajaro_Score2;
+    public static int Foca_Score2;
+    public static int Yeti_Score2;
+    public static int Hielo_Score2;
+    public static int Brick_Score;
+    public static int Brick_Score2;
 
 
 
-    private static Label totalScoreLable1;
-    private static Label totalScoreLable2;
-    private static Label poposcoreLabel;
-    private static Label nanascoreLabel;
-    private static Label popoLivesLabel;
-    private static Label nanaLivesLabel;
-    private static Label pumpkinscoreLabel;
-    private static Label onionscoreLabel;
-    private static Label carrotscoreLabel;
-    private static Label birdscoreLabel;
-    private static Label bearscoreLabel;
-    private static Label yetiscoreLabel;
-    private static Label sealscoreLabel;
-    private static Label teroscoreLabel;
-    private static Label pumpkinscoreLabel2;
-    private static Label onionscoreLabel2;
-    private static Label carrotscoreLabel2;
-    private static Label birdscoreLabel2;
-    private static Label bearscoreLabel2;
-    private static Label yetiscoreLabel2;
-    private static Label sealscoreLabel2;
-    private static Label teroscoreLabel2;
-    private static Label brickScoreLabel;
-    private static Label brickScoreLabel2;
+    private static Label Total_Score_Lable1;
+    private static Label Total_Score_Lable2;
+    private static Label Popo_Score_Label;
+    private static Label Nana_Score_Label;
+    private static Label Popo_Lives_Label;
+    private static Label Nana_Lives_Label;
+    private static Label Lechuga_Score_Label;
+    private static Label Naranja_Score_Label;
+    private static Label Banano_Score_Label;
+    private static Label Berenjena_Score_Label;
+    private static Label Pajaro_Score_Label;
+    private static Label Foca_Score_Label;
+    private static Label Yeti_Score_Label;
+    private static Label Hielo_Score_Label;
+    private static Label Lechuga_Score_Label2;
+    private static Label Naranja_Score_Label2;
+    private static Label Banano_Score_Label2;
+    private static Label Berenjena_Score_Label2;
+    private static Label Pajaro_Score_Label2;
+    private static Label Foca_Score_Label2;
+    private static Label Yeti_Score_Label2;
+    private static Label Hielo_Score_Label2;
+
+    private static Label Brick_Score_Label;
+    private static Label Brick_Score_Label2;
 
 
-    private Label total;
-    private Label total2;
-    private Label pumpkinLabel;
-    private Label onionLabel;
-    private Label carrotLabel;
-    private Label birdLabel;
-    private Label bearLabel;
-    private Label yetiLabel;
-    private Label sealLabel;
-    private Label teroLabel;
-    private Label pumpkinLabel2;
-    private Label onionLabel2;
-    private Label carrotLabel2;
-    private Label birdLabel2;
-    private Label bearLabel2;
-    private Label yetiLabel2;
-    private Label sealLabel2;
-    private Label teroLabel2;
-    private Label scoreLabel;
-    private Label scoreLabel2;
-    private Label livesLabel;
-    private Label livesLabel2;
-    private Label popoLabel;
-    private Label nanaLabel;
-    private Label spaceLabel;
-    private Label brick;
-    private Label brick2;
+    private Label Total;
+    private Label Total2;
+    private Label Lechuga_Label;
+    private Label Naranja_Label;
+    private Label Banano_Label;
+    private Label Berenjena_Label;
+    private Label Pajaro_Label;
+    private Label Foca_Label;
+    private Label Yeti_Label;
+    private Label Hielo_Label;
+    private Label Lechuga_Label2;
+    private Label Naranja_Label2;
+    private Label Banano_Label2;
+    private Label Berenjena_Label2;
+    private Label Pajaro_Label2;
+    private Label Foca_Label2;
+    private Label Yeti_Label2;
+    private Label Hielo_Label2;
 
-    public boolean gameover;
+    private Label Score_Label;
+    private Label Score_Label2;
+    private Label Lives_Label;
+    private Label Lives_Label2;
+    private Label Popo_Label;
+    private Label Nana_Label;
+    private Label Space_Label;
+    private Label Brick;
+    private Label Brick2;
+
+    public boolean GameOver;
 
 
     /**
@@ -111,29 +119,29 @@ public class Hud implements Disposable {
      * @param sb es el sprite batch en el que se dibujan los labels de score,lives y sus respectivos valores
      */
     public Hud(SpriteBatch sb) {
-        this.gameover = false;
-        popoScore = 0;
-        nanaScore = 0;
-        popoLives = 5;
-        nanaLives = 5;
-        pumpkinScore = 0;
-        onionScore = 0;
-        carrotScore = 0;
-        birdScore = 0;
-        bearScore = 0;
-        yetiScore = 0;
-        sealScore = 0;
-        teroScore = 0;
-        pumpkinScore2 = 0;
-        onionScore2 = 0;
-        carrotScore2 = 0;
-        birdScore2 = 0;
-        bearScore2 = 0;
-        yetiScore2 = 0;
-        sealScore2 = 0;
-        teroScore2 = 0;
-        brickScore = 0;
-        brickScore2 = 0;
+        this.GameOver = false;
+        Popo_Score = 0;
+        Nana_Score = 0;
+        Popo_Lives = 5;
+        Nana_Lives = 5;
+        Lechuga_Score = 0;
+        Naranja_Score = 0;
+        Banano_Score = 0;
+        Berenjena_Score = 0;
+        Pajaro_Score = 0;
+        Foca_Score = 0;
+        Yeti_Score = 0;
+        Hielo_Score = 0;
+        Lechuga_Score2 = 0;
+        Naranja_Score2 = 0;
+        Banano_Score2 = 0;
+        Berenjena_Score2 = 0;
+        Pajaro_Score2 = 0;
+        Foca_Score2 = 0;
+        Yeti_Score2 = 0;
+        Hielo_Score2 = 0;
+        Brick_Score = 0;
+        Brick_Score2 = 0;
 
 
 
@@ -145,84 +153,82 @@ public class Hud implements Disposable {
         table.setFillParent(true);
 
 
-        poposcoreLabel = new Label(String.format("%06d", popoScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        nanascoreLabel = new Label(String.format("%06d", nanaScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        popoLivesLabel = new Label(String.format("%01d", popoLives), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        nanaLivesLabel = new Label(String.format("%01d", nanaLives), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        pumpkinscoreLabel = new Label(String.format("%05d", pumpkinScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        onionscoreLabel = new Label(String.format("%05d", onionScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        carrotscoreLabel = new Label(String.format("%05d", carrotScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdscoreLabel = new Label(String.format("%05d", birdScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        bearscoreLabel = new Label(String.format("%05d", bearScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        sealscoreLabel = new Label(String.format("%05d", sealScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        teroscoreLabel = new Label(String.format("%05d", teroScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdscoreLabel = new Label(String.format("%05d", birdScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        yetiscoreLabel = new Label(String.format("%05d", yetiScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        pumpkinscoreLabel2 = new Label(String.format("%05d", pumpkinScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        onionscoreLabel2 = new Label(String.format("%05d", onionScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        carrotscoreLabel2 = new Label(String.format("%05d", carrotScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdscoreLabel2 = new Label(String.format("%05d", birdScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        bearscoreLabel2 = new Label(String.format("%05d", bearScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        sealscoreLabel2 = new Label(String.format("%05d", sealScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        teroscoreLabel2 = new Label(String.format("%05d", teroScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdscoreLabel2 = new Label(String.format("%05d", birdScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        yetiscoreLabel2 = new Label(String.format("%05d", yetiScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        totalScoreLable1 = new Label(String.format("%06d", popoScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        totalScoreLable2 = new Label(String.format("%06d", nanaScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        brickScoreLabel = new Label(String.format("%06d", brickScore), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        brickScoreLabel2 = new Label(String.format("%06d", brickScore2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Popo_Score_Label = new Label(String.format("%06d", Popo_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Nana_Score_Label = new Label(String.format("%06d", Nana_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Popo_Lives_Label = new Label(String.format("%01d", Popo_Lives), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Nana_Lives_Label = new Label(String.format("%01d", Nana_Lives), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lechuga_Score_Label = new Label(String.format("%05d", Lechuga_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Naranja_Score_Label = new Label(String.format("%05d", Naranja_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Banano_Score_Label = new Label(String.format("%05d", Banano_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Berenjena_Score_Label = new Label(String.format("%05d", Berenjena_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Pajaro_Score_Label = new Label(String.format("%05d", Pajaro_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Foca_Score_Label = new Label(String.format("%05d", Foca_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Yeti_Score_Label = new Label(String.format("%05d", Yeti_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Hielo_Score_Label = new Label(String.format("%05d", Hielo_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lechuga_Score_Label2 = new Label(String.format("%05d", Lechuga_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Naranja_Score_Label2 = new Label(String.format("%05d", Naranja_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Banano_Score_Label2 = new Label(String.format("%05d", Banano_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Berenjena_Score_Label2 = new Label(String.format("%05d", Berenjena_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Pajaro_Score_Label2 = new Label(String.format("%05d", Pajaro_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Foca_Score_Label2 = new Label(String.format("%05d", Foca_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Yeti_Score_Label2 = new Label(String.format("%05d", Yeti_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Hielo_Score_Label2 = new Label(String.format("%05d", Hielo_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Total_Score_Lable1 = new Label(String.format("%06d", Popo_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Total_Score_Lable2 = new Label(String.format("%06d", Nana_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Brick_Score_Label = new Label(String.format("%06d", Brick_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Brick_Score_Label2 = new Label(String.format("%06d", Brick_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
 
-        popoLabel = new Label("POPO", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        nanaLabel = new Label("NANA", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        livesLabel = new Label("LIVES", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        livesLabel2 = new Label("LIVES", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        scoreLabel = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        scoreLabel2 = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        spaceLabel = new Label("     ", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        pumpkinLabel = new Label("PUMPKINS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        carrotLabel = new Label("CARROTS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        onionLabel = new Label("ONIONS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdLabel = new Label("BIRDS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        bearLabel = new Label("BEARS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        yetiLabel = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        sealLabel = new Label("SEALS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        teroLabel = new Label("TEROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        pumpkinLabel2 = new Label("PUMPKINS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        carrotLabel2 = new Label("CARROTS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        onionLabel2 = new Label("ONIONS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        birdLabel2 = new Label("BIRDS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        bearLabel2 = new Label("BEARS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        yetiLabel2 = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        sealLabel2 = new Label("SEALS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        teroLabel2 = new Label("TEROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        total = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        total2 = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        brick = new Label("BRICKS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        brick2 = new Label("BRICKS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Popo_Label = new Label("POPO", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Nana_Label = new Label("NANA", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lives_Label = new Label("LIVES", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lives_Label2 = new Label("LIVES", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Score_Label = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Score_Label2 = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Space_Label = new Label("     ", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lechuga_Label = new Label("LECHUGAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Naranja_Label = new Label("NARANJAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Banano_Label = new Label("BANANOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Berenjena_Label = new Label("BERENJENAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Pajaro_Label = new Label("PAJAROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Foca_Label = new Label("FOCAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Yeti_Label = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Hielo_Label = new Label("HIELOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Lechuga_Label2 = new Label("LECHUGAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Naranja_Label2 = new Label("NARANJAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Banano_Label2 = new Label("BANANOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Berenjena_Label2 = new Label("BERENJENAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Pajaro_Label2 = new Label("PAJAROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Foca_Label2 = new Label("FOCAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Yeti_Label2 = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Hielo_Label2 = new Label("HIELOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Total = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Total2 = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Brick = new Label("BRICKS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        Brick2 = new Label("BRICKS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
 
 
 
 
         if (menuScreen.players == 1) {
 
-            table.add(popoLabel).expandX().padTop(10);
-            table.add(livesLabel).expandX().padTop(10);
+            table.add(Popo_Label).expandX().padTop(10);
+            table.add(Lives_Label).expandX().padTop(10);
             table.row();
-            table.add(poposcoreLabel).expandX();
-            table.add(popoLivesLabel).expandX();
+            table.add(Popo_Score_Label).expandX();
+            table.add(Popo_Lives_Label).expandX();
 
         } else {
 
-            table.add(popoLabel).expandX().padTop(10);
-            table.add(livesLabel).expandX().padTop(10);
-            table.add(nanaLabel).expandX().padTop(10);
-            table.add(livesLabel2).expandX().padTop(10);
+            table.add(Popo_Label).expandX().padTop(10);
+            table.add(Lives_Label).expandX().padTop(10);
+            table.add(Nana_Label).expandX().padTop(10);
+            table.add(Lives_Label2).expandX().padTop(10);
             table.row();
-            table.add(poposcoreLabel).expandX();
-            table.add(popoLivesLabel).expandX();
-            table.add(nanascoreLabel).expandX();
-            table.add(nanaLivesLabel).expandX();
+            table.add(Popo_Score_Label).expandX();
+            table.add(Popo_Lives_Label).expandX();
+            table.add(Nana_Score_Label).expandX();
+            table.add(Nana_Lives_Label).expandX();
 
         }
         stage.addActor(table);
@@ -237,127 +243,116 @@ public class Hud implements Disposable {
         table.setFillParent(true);
 
         if (menuScreen.players == 1) {
-            table.add(popoLabel).expandX().padTop(10);
+            table.add(Popo_Label).expandX().padTop(10);
 
             table.row();
-            table.add(brick).expandX().padTop(10);
-            table.add(brickScoreLabel).expandX().padTop(10);
+            table.add(Brick).expandX().padTop(10);
+            table.add(Brick_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(livesLabel).expandX().padTop(10);
-            table.add(popoLivesLabel).expandX().padTop(10);
+            table.add(Lives_Label).expandX().padTop(10);
+            table.add(Popo_Lives_Label).expandX().padTop(10);
 
             table.row();
-            table.add(pumpkinLabel).expandX().padTop(10);
-            table.add(pumpkinscoreLabel).expandX().padTop(10);
+            table.add(Lechuga_Label).expandX().padTop(10);
+            table.add(Lechuga_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(onionLabel).expandX().padTop(10);
-            table.add(onionscoreLabel).expandX().padTop(10);
+            table.add(Naranja_Label).expandX().padTop(10);
+            table.add(Naranja_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(carrotLabel).expandX().padTop(10);
-            table.add(carrotscoreLabel).expandX().padTop(10);
+            table.add(Banano_Label).expandX().padTop(10);
+            table.add(Banano_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(birdLabel).expandX().padTop(10);
-            table.add(birdscoreLabel).expandX().padTop(10);
+            table.add(Berenjena_Label).expandX().padTop(10);
+            table.add(Berenjena_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(bearLabel).expandX().padTop(10);
-            table.add(bearscoreLabel).expandX().padTop(10);
+            table.add(Pajaro_Label).expandX().padTop(10);
+            table.add(Pajaro_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(sealLabel).expandX().padTop(10);
-            table.add(sealscoreLabel).expandX().padTop(10);
+            table.add(Foca_Label).expandX().padTop(10);
+            table.add(Foca_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(yetiLabel).expandX().padTop(10);
-            table.add(yetiscoreLabel).expandX().padTop(10);
+            table.add(Yeti_Label).expandX().padTop(10);
+            table.add(Yeti_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(teroLabel).expandX().padTop(10);
-            table.add(teroscoreLabel).expandX().padTop(10);
+            table.add(Hielo_Label).expandX().padTop(10);
+            table.add(Hielo_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(carrotLabel).expandX().padTop(10);
-            table.add(carrotscoreLabel).expandX().padTop(10);
-
-            table.row();
-            table.add(total).expandX().padTop(10);
-            table.add(poposcoreLabel).expandX().padTop(10);
+            table.add(Total).expandX().padTop(10);
+            table.add(Popo_Score_Label).expandX().padTop(10);
         } else {
-            table.add(popoLabel).expandX().padTop(10);
-            table.add(spaceLabel).expandX().padTop(10);
-            table.add(nanaLabel).expandX().padTop(10);
+            table.add(Popo_Label).expandX().padTop(10);
+            table.add(Space_Label).expandX().padTop(10);
+            table.add(Nana_Label).expandX().padTop(10);
 
             table.row();
-            table.add(brick).expandX().padTop(10);
-            table.add(brickScoreLabel).expandX().padTop(10);
-            table.add(brick2).expandX().padTop(10);
-            table.add(brickScoreLabel2).expandX().padTop(10);
-
-
-            table.row();
-            table.add(pumpkinLabel).expandX().padTop(10);
-            table.add(pumpkinscoreLabel).expandX().padTop(10);
-            table.add(pumpkinLabel2).expandX().padTop(10);
-            table.add(pumpkinscoreLabel2).expandX().padTop(10);
-
-            table.row();
-            table.add(onionLabel).expandX().padTop(10);
-            table.add(onionscoreLabel).expandX().padTop(10);
-            table.add(onionLabel2).expandX().padTop(10);
-            table.add(onionscoreLabel2).expandX().padTop(10);
-
-            table.row();
-            table.add(carrotLabel).expandX().padTop(10);
-            table.add(carrotscoreLabel).expandX().padTop(10);
-            table.add(carrotLabel2).expandX().padTop(10);
-            table.add(carrotscoreLabel2).expandX().padTop(10);
-
-            table.row();
-            table.add(birdLabel).expandX().padTop(10);
-            table.add(birdscoreLabel).expandX().padTop(10);
-            table.add(birdLabel2).expandX().padTop(10);
-            table.add(birdscoreLabel2).expandX().padTop(10);
+            table.add(Brick).expandX().padTop(10);
+            table.add(Brick_Score_Label).expandX().padTop(10);
+            table.add(Brick2).expandX().padTop(10);
+            table.add(Brick_Score_Label2).expandX().padTop(10);
 
 
             table.row();
-            table.add(bearLabel).expandX().padTop(10);
-            table.add(bearscoreLabel).expandX().padTop(10);
-            table.add(bearLabel2).expandX().padTop(10);
-            table.add(bearscoreLabel2).expandX().padTop(10);
+            table.add(Lechuga_Label).expandX().padTop(10);
+            table.add(Lechuga_Score_Label).expandX().padTop(10);
+            table.add(Lechuga_Label2).expandX().padTop(10);
+            table.add(Lechuga_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(sealLabel).expandX().padTop(10);
-            table.add(sealscoreLabel).expandX().padTop(10);
-            table.add(sealLabel2).expandX().padTop(10);
-            table.add(sealscoreLabel2).expandX().padTop(10);
+            table.add(Naranja_Label).expandX().padTop(10);
+            table.add(Naranja_Score_Label).expandX().padTop(10);
+            table.add(Naranja_Label2).expandX().padTop(10);
+            table.add(Naranja_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(yetiLabel).expandX().padTop(10);
-            table.add(yetiscoreLabel).expandX().padTop(10);
-            table.add(yetiLabel2).expandX().padTop(10);
-            table.add(yetiscoreLabel2).expandX().padTop(10);
+            table.add(Banano_Label).expandX().padTop(10);
+            table.add(Banano_Score_Label).expandX().padTop(10);
+            table.add(Banano_Label2).expandX().padTop(10);
+            table.add(Banano_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(teroLabel).expandX().padTop(10);
-            table.add(teroscoreLabel).expandX().padTop(10);
-            table.add(teroLabel2).expandX().padTop(10);
-            table.add(teroscoreLabel2).expandX().padTop(10);
+            table.add(Berenjena_Label).expandX().padTop(10);
+            table.add(Berenjena_Score_Label).expandX().padTop(10);
+            table.add(Berenjena_Label2).expandX().padTop(10);
+            table.add(Berenjena_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(carrotLabel).expandX().padTop(10);
-            table.add(carrotscoreLabel).expandX().padTop(10);
-            table.add(carrotLabel2).expandX().padTop(10);
-            table.add(carrotscoreLabel2).expandX().padTop(10);
+            table.add(Pajaro_Label).expandX().padTop(10);
+            table.add(Pajaro_Score_Label).expandX().padTop(10);
+            table.add(Pajaro_Label2).expandX().padTop(10);
+            table.add(Pajaro_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(total).expandX().padTop(10);
-            table.add(poposcoreLabel).expandX().padTop(10);
-            table.add(total2).expandX().padTop(10);
-            table.add(nanascoreLabel).expandX().padTop(10);
+            table.add(Foca_Label).expandX().padTop(10);
+            table.add(Foca_Score_Label).expandX().padTop(10);
+            table.add(Foca_Label2).expandX().padTop(10);
+            table.add(Foca_Score_Label2).expandX().padTop(10);
+
+            table.row();
+            table.add(Hielo_Label).expandX().padTop(10);
+            table.add(Hielo_Score_Label).expandX().padTop(10);
+            table.add(Hielo_Label2).expandX().padTop(10);
+            table.add(Hielo_Score_Label2).expandX().padTop(10);
+
+            table.row();
+            table.add(Yeti_Label).expandX().padTop(10);
+            table.add(Yeti_Score_Label).expandX().padTop(10);
+            table.add(Yeti_Label2).expandX().padTop(10);
+            table.add(Yeti_Score_Label2).expandX().padTop(10);
+
+            table.row();
+            table.add(Total).expandX().padTop(10);
+            table.add(Popo_Score_Label).expandX().padTop(10);
+            table.add(Total2).expandX().padTop(10);
+            table.add(Nana_Score_Label).expandX().padTop(10);
         }
         stage.clear();
         stage.addActor(table);
@@ -366,53 +361,62 @@ public class Hud implements Disposable {
 
     public static void addScore(int value, Class<?> type, boolean popo) {
         if (popo){
-            if (type == Onion.class) {
-                onionScore += value;
-                onionscoreLabel.setText(String.format("%05d", onionScore));
-            } else if (type == Carrot.class) {
-                carrotScore += value;
-                carrotscoreLabel.setText(String.format("%05d", carrotScore));
-            } else if (type == Pumpkin.class) {
-                pumpkinScore += value;
-                pumpkinscoreLabel.setText(String.format("%05d", pumpkinScore));
-            } else if (type == Foca.class) {
-                sealScore += value;
-                sealscoreLabel.setText(String.format("%05d", sealScore));
-            } else if (type == Pajaro.class) {
-                birdScore += value;
-                birdscoreLabel.setText(String.format("%05d", birdScore));
-            } else if (type == Brick.class) {
-                brickScore += value;
-                brickScoreLabel.setText(String.format("%05d", brickScore));
+            if (type == Naranja.class) {
+                Naranja_Score += value;
+                Naranja_Score_Label.setText(String.format("%05d", Naranja_Score));
+            } else if (type == Banano.class) {
+                Banano_Score += value;
+                Banano_Score_Label.setText(String.format("%05d", Banano_Score));
+            } else if (type == Lechugas.class) {
+                Lechuga_Score += value;
+                Lechuga_Score_Label.setText(String.format("%05d", Lechuga_Score));
+            }else if (type == Berenjenas.class) {
+                Berenjena_Score += value;
+                Berenjena_Score_Label.setText(String.format("%05d", Berenjena_Score));
+            }else if (type == Foca.class) {
+                Foca_Score += value;
+                Foca_Score_Label.setText(String.format("%05d", Foca_Score));
+            }else if (type == Pajaro.class) {
+                Pajaro_Score += value;
+                Pajaro_Score_Label.setText(String.format("%05d", Pajaro_Score));
+            }else if (type == Hielo.class) {
+                Hielo_Score += value;
+                Hielo_Score_Label.setText(String.format("%05d", Hielo_Score));
+            }else if (type == Yeti.class) {
+                Yeti_Score += value;
+                Yeti_Score_Label.setText(String.format("%05d", Yeti_Score));
+            }else if (type == Brick.class) {
+                Brick_Score += value;
+                Brick_Score_Label.setText(String.format("%05d", Brick_Score));
             }
         } else {
-            if (type == Onion.class) {
-                onionScore2 += value;
-                onionscoreLabel2.setText(String.format("%05d", onionScore2));
-            } else if (type == Carrot.class) {
-                carrotScore2 += value;
-                carrotscoreLabel2.setText(String.format("%05d", carrotScore2));
-            } else if (type == Pumpkin.class) {
-                pumpkinScore2 += value;
-                pumpkinscoreLabel2.setText(String.format("%05d", pumpkinScore2));
-            } else if (type == Bear.class) {
-                bearScore2 += value;
-                bearscoreLabel2.setText(String.format("%05d", bearScore2));
-            } else if (type == Seal.class) {
-                sealScore2 += value;
-                sealscoreLabel2.setText(String.format("%05d", sealScore2));
-            } else if (type == Bird.class) {
-                birdScore2 += value;
-                birdscoreLabel2.setText(String.format("%05d", birdScore2));
+            if (type == Naranja.class) {
+                Naranja_Score2 += value;
+                Naranja_Score_Label2.setText(String.format("%05d", Naranja_Score2));
+            } else if (type == Banano.class) {
+                Banano_Score2 += value;
+                Banano_Score_Label2.setText(String.format("%05d", Banano_Score2));
+            } else if (type == Lechugas.class) {
+                Lechuga_Score2 += value;
+                Lechuga_Score_Label2.setText(String.format("%05d", Lechuga_Score2));
+            } else if (type == Berenjenas.class) {
+                Berenjena_Score2 += value;
+                Berenjena_Score_Label2.setText(String.format("%05d", Berenjena_Score2));
+            }else if (type == Foca.class) {
+                Foca_Score2 += value;
+                Foca_Score_Label2.setText(String.format("%05d", Foca_Score2));
+            } else if (type == Pajaro.class) {
+                Pajaro_Score2 += value;
+                Pajaro_Score_Label2.setText(String.format("%05d", Pajaro_Score2));
+            } else if (type == Hielo.class) {
+                Hielo_Score2 += value;
+                Hielo_Score_Label2.setText(String.format("%05d", Hielo_Score2));
             } else if (type == Yeti.class) {
-                yetiScore2 += value;
-                yetiscoreLabel2.setText(String.format("%05d", yetiScore2));
-            } else if (type == Pterodactyl.class) {
-                teroScore2 += value;
-                teroscoreLabel2.setText(String.format("%05d", teroScore2));
+                Yeti_Score2 += value;
+                Yeti_Score_Label2.setText(String.format("%05d", Yeti_Score2));
             } else if (type == Brick.class) {
-                brickScore2 += value;
-                brickScoreLabel2.setText(String.format("%05d", brickScore2));
+                Brick_Score2 += value;
+                Brick_Score_Label2.setText(String.format("%05d", Brick_Score2));
             }
         }
 
@@ -420,32 +424,32 @@ public class Hud implements Disposable {
     }
 
     public static int getPopoLives() {
-        return popoLives;
+        return Popo_Lives;
     }
 
     public static int getNanaLives() {
-        return nanaLives;
+        return Nana_Lives;
     }
 
 
     public static void addScorePopo(int value) {
-        popoScore += value;
-        poposcoreLabel.setText(String.format("%06d", popoScore));
+        Popo_Score += value;
+        Popo_Score_Label.setText(String.format("%06d", Popo_Score));
     }
 
     public static void addScoreNana(int value) {
-        nanaScore += value;
-        nanascoreLabel.setText(String.format("%06d", nanaScore));
+        Nana_Score += value;
+        Nana_Score_Label.setText(String.format("%06d", Nana_Score));
     }
 
     public static void removeLivePopo(int value) {
-        popoLives -= value;
-        popoLivesLabel.setText(String.format("%01d", popoLives));
+        Popo_Lives -= value;
+        Popo_Lives_Label.setText(String.format("%01d", Popo_Lives));
     }
 
     public static void removeLiveNana(int value) {
-        nanaLives -= value;
-        nanaLivesLabel.setText(String.format("%01d", nanaLives));
+        Nana_Lives -= value;
+        Nana_Lives_Label.setText(String.format("%01d", Nana_Lives));
     }
 
     @Override
