@@ -1,18 +1,15 @@
 package com.client.main.Sprites.Elements;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.client.main.mainClient;
 import com.client.main.hud.Hud;
 import com.client.main.windows.GameScreen;
 
-
-public class Berenjenas  extends Fruit{
-    public Berenjenas(GameScreen screen, float x, float y) {
+public class Lechugas extends Fruit{
+    public Lechugas(GameScreen screen, float x, float y) {
         super(screen, x, y);
-        setRegion(screen.getFruitAtlas().findRegion("fruit"), 1, 2, 16, 16);
+        setRegion(screen.getFruitAtlas().findRegion("fruit"), 2, 21, 16, 16);
     }
 
     public void defFruit() {
@@ -36,15 +33,13 @@ public class Berenjenas  extends Fruit{
         this.b2body.createFixture(FDef).setUserData(this);
     }
     public void use(boolean Popo) {
-
         if (!this.toDestroy) {
             if (Popo) {
-                Hud.addScore(300, Berenjenas.class,true);
-                Hud.addScorePopo(300);
-            }
-            if (!Popo) {
-                Hud.addScore(300,Berenjenas.class,false);
-                Hud.addScoreNana(300);
+                Hud.addScore(400, Lechugas.class,true);
+                Hud.addScorePopo(400);
+            } else {
+                Hud.addScore(400,Lechugas.class,false);
+                Hud.addScoreNana(400);
             }
         }
         destroy();

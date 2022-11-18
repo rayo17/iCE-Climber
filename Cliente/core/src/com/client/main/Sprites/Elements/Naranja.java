@@ -9,7 +9,7 @@ import com.client.main.windows.GameScreen;
 public class Naranja extends Fruit{
     public Naranja(GameScreen screen, float x, float y) {
         super(screen, x, y);
-        setRegion(screen.getFruitAtlas().findRegion("fruit"), 1, 2, 16, 16);
+        setRegion(screen.getFruitAtlas().findRegion("fruit"), 17,1,13,17);
     }
 
     public void defFruit(){
