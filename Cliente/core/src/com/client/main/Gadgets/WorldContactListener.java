@@ -35,7 +35,7 @@ public class WorldContactListener implements ContactListener{
                     if (fixt_A.getUserData() instanceof Popo){
                         ((Tiles) fixt_B.getUserData()).onHeadHit(true);
                     } else if (fixt_A.getUserData() instanceof Nana) {
-                        ((Tiles) fixt_B).onHeadHit(false);
+                        ((Tiles) fixt_B.getUserData()).onHeadHit(false);
                     }
                 }
                 else {
