@@ -24,9 +24,9 @@ import com.client.main.Sprites.Characters.Popo;
 import com.client.main.Sprites.Characters.Nana;
 import com.client.main.Gadgets.B2WorldCreator;
 import com.client.main.Gadgets.WorldContactListener;
-//import com.client.main.Sockets.Connect;
-//import com.client.main.Sockets.jsonManager.jsonFactory;
-//import com.client.main.Sockets.jsonManager.jsonHandler;
+import com.client.main.Sockets.Connect;
+import com.client.main.Sockets.jsonManager.jsonFactory;
+import com.client.main.Sockets.jsonManager.jsonHandler;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -79,7 +79,7 @@ public class GameScreen implements Screen, Runnable {
     private Nana nanacharacter;
 
     //musica del juego
-    //private Music music;
+    private Music music;
 
     //private Pterodactyl teroFinal;
 
@@ -88,7 +88,7 @@ public class GameScreen implements Screen, Runnable {
     public LinkedBlockingQueue<FruitDef> fruitsToSpawn;
     private Array<Fruit> frutas;
 
-    //Connect connect;
+    Connect connect;
 
     private Thread t;
     /**
@@ -115,6 +115,17 @@ public class GameScreen implements Screen, Runnable {
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("mainClient.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1 / mainClient.PPM);
+
+        // inicia la musica
+        if (!this.bonus) {
+            music = mainClient.manager.get("audio/music/ice_climber.mp3",Music.class);
+            music.setLooping(true);
+            music.play();
+        } else {
+            music = mainClient.manager.get("audio/music/bonus_stage.mp3",Music.class);
+            music.setLooping(true);
+            music.play();
+        }
 
         //coloca la posicion de la camara e inicia algunas variables necesarias para que funcione el juego
         gameCamera.position.set(gameport.getWorldWidth() / 2, (gameport.getWorldHeight() + 0) / 2, 0);
@@ -237,20 +248,20 @@ public class GameScreen implements Screen, Runnable {
         if (this.characters == 1) {
             popocharacter.update(dt);
             if (Hud.getPopoLives() < 1) {
-                game.setScreen(new GameOverScreen(game, data));
+                game.setScreen(new GameOver(game, data));
             }
             if (teroFinal.destroyed) {
-                game.setScreen(new GameOverScreen(game, data));
+                game.setScreen(new GameOver(game, data));
             }
         } else {
             if (Hud.getPopoLives() < 1) {
-                game.setScreen(new GameOverScreen(game, data));
+                game.setScreen(new GameOver(game, data));
             }
             if (Hud.getNanaLives() < 1) {
-                game.setScreen(new GameOverScreen(game, data));
+                game.setScreen(new GameOver(game, data));
             }
             if (teroFinal.destroyed) {
-                game.setScreen(new GameOverScreen(game, data));
+                game.setScreen(new GameOver(game, data));
             }
             popocharacter.update(dt);
             nanacharacter.update(dt);
@@ -327,7 +338,7 @@ public class GameScreen implements Screen, Runnable {
         }
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.T)) {
-            game.setScreen(new GameOverScreen(game, data));
+            game.setScreen(new GameOver(game, data));
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.Y)) {
             this.spawnEnemy(new EnemyDef(new Vector2(10, 700), Yeti.class, true));
