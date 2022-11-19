@@ -1,5 +1,6 @@
 package com.client.main.Gadgets;
 import com.badlogic.gdx.physics.box2d.*;
+import com.client.main.Sprites.Items.Tiles;
 import com.client.main.mainClient;
 import com.client.main.Sprites.Enemies.Enemy;
 import com.client.main.Sprites.Elements.Fruit;
@@ -17,12 +18,12 @@ public class WorldContactListener implements ContactListener{
         if (fixt_A.getUserData() == "head" || fixt_B.getUserData() == "head"){
             Fixture head = fixt_A.getUserData() == "head" ? fixt_A : fixt_B;
             Fixture objt = head == fixt_A ? fixt_B : fixt_A;
-            if (objt.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(objt.getUserData().getClass())){
+            if (objt.getUserData() != null && Tiles.class.isAssignableFrom(objt.getUserData().getClass())){
                 if (objt.getUserData() instanceof Popo){
-                    ((InteractiveTileObject) objt.getUserData()).onHeadHit(true);
+                    ((Tiles) objt.getUserData()).onHeadHit(true);
                 }
                 else {
-                    ((InteractiveTileObject) objt.getUserData()).onHeadHit(false);
+                    ((Tiles) objt.getUserData()).onHeadHit(false);
                 }
             }
         }
@@ -32,16 +33,16 @@ public class WorldContactListener implements ContactListener{
             case mainClient.PLAYER_HEAD_BIT | mainClient.BRICK_BIT:
                 if (fixt_A.getFilterData().categoryBits == mainClient.PLAYER_HEAD_BIT){
                     if (fixt_A.getUserData() instanceof Popo){
-                        ((InteractiveTileObject) fixt_B.getUserData()).onHeadHit(true);
+                        ((Tiles) fixt_B.getUserData()).onHeadHit(true);
                     } else if (fixt_A.getUserData() instanceof Nana) {
-                        ((InteractiveTileObject) fixt_B).onHeadHit(false);
+                        ((Tiles) fixt_B).onHeadHit(false);
                     }
                 }
                 else {
                     if (fixt_B.getUserData() instanceof Popo){
-                        ((InteractiveTileObject) fixt_A.getUserData()).onHeadHit(true);
+                        ((Tiles) fixt_A.getUserData()).onHeadHit(true);
                     } else if (fixt_B.getUserData() instanceof Nana) {
-                        ((InteractiveTileObject) fixt_A.getUserData()).onHeadHit(false);
+                        ((Tiles) fixt_A.getUserData()).onHeadHit(false);
                     }
                 }
                 break;

@@ -17,8 +17,10 @@ import com.client.main.Sprites.Enemies.Foca;
 import com.client.main.Sprites.Enemies.Pajaro;
 import com.client.main.Sprites.Enemies.Hielo;
 import com.client.main.Sprites.Enemies.Yeti;
+import com.client.main.Sprites.Items.Brick;
 import com.client.main.mainClient;
 import com.client.main.windows.menuScreen;
+import com.client.main.Sprites.Items.Brick;
 
 
 /**
@@ -107,7 +109,7 @@ public class Hud implements Disposable {
     private Label Popo_Label;
     private Label Nana_Label;
     private Label Space_Label;
-    private Label Brick;
+    private static Label Brick;
     private Label Brick2;
 
     public boolean GameOver;
