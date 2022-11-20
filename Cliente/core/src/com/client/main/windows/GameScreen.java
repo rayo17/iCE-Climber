@@ -171,8 +171,6 @@ public class GameScreen implements Screen, Runnable {
                 enemigos.add(new Pajaro(this, edef.pos.y, edef.facingLeft));
             } else if (edef.type == Foca.class) {
                 enemigos.add(new Foca(this, edef.pos.y, edef.facingLeft));
-            } else if (edef.type == Yeti.class) {
-                enemigos.add(new Yeti(this, edef.pos.y, edef.facingLeft));
             } else if (edef.type == Hielo.class) {
                 enemigos.add(new Hielo(this, edef.pos.y, edef.facingLeft));
             } /**else if (edef.type == Yeti.class) {
@@ -339,9 +337,6 @@ public class GameScreen implements Screen, Runnable {
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.T)) {
             game.setScreen(new GameOver(game, data));
-        }
-        if (Gdx.input.isKeyJustPressed(Input.Keys.Y)) {
-            this.spawnEnemy(new EnemyDef(new Vector2(10, 700), Yeti.class, true));
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.U)) {
             this.spawnEnemy(new EnemyDef(new Vector2(10, 700), Foca.class, true));

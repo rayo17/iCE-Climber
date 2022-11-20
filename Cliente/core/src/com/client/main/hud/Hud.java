@@ -16,7 +16,7 @@ import com.client.main.Sprites.Elements.Naranja;
 import com.client.main.Sprites.Enemies.Foca;
 import com.client.main.Sprites.Enemies.Pajaro;
 import com.client.main.Sprites.Enemies.Hielo;
-import com.client.main.Sprites.Enemies.Yeti;
+
 import com.client.main.Sprites.Items.Brick;
 import com.client.main.mainClient;
 import com.client.main.windows.menuScreen;
@@ -41,7 +41,7 @@ public class Hud implements Disposable {
     public static int Berenjena_Score;
     public static int Pajaro_Score;
     public static int Foca_Score;
-    public static int Yeti_Score;
+
     public static int Hielo_Score;
     public static int Lechuga_Score2;
     public static int Naranja_Score2;
@@ -49,7 +49,7 @@ public class Hud implements Disposable {
     public static int Berenjena_Score2;
     public static int Pajaro_Score2;
     public static int Foca_Score2;
-    public static int Yeti_Score2;
+
     public static int Hielo_Score2;
     public static int Brick_Score;
     public static int Brick_Score2;
@@ -68,7 +68,7 @@ public class Hud implements Disposable {
     private static Label Berenjena_Score_Label;
     private static Label Pajaro_Score_Label;
     private static Label Foca_Score_Label;
-    private static Label Yeti_Score_Label;
+
     private static Label Hielo_Score_Label;
     private static Label Lechuga_Score_Label2;
     private static Label Naranja_Score_Label2;
@@ -76,7 +76,7 @@ public class Hud implements Disposable {
     private static Label Berenjena_Score_Label2;
     private static Label Pajaro_Score_Label2;
     private static Label Foca_Score_Label2;
-    private static Label Yeti_Score_Label2;
+
     private static Label Hielo_Score_Label2;
 
     private static Label Brick_Score_Label;
@@ -91,7 +91,7 @@ public class Hud implements Disposable {
     private Label Berenjena_Label;
     private Label Pajaro_Label;
     private Label Foca_Label;
-    private Label Yeti_Label;
+
     private Label Hielo_Label;
     private Label Lechuga_Label2;
     private Label Naranja_Label2;
@@ -99,7 +99,7 @@ public class Hud implements Disposable {
     private Label Berenjena_Label2;
     private Label Pajaro_Label2;
     private Label Foca_Label2;
-    private Label Yeti_Label2;
+
     private Label Hielo_Label2;
 
     private Label Score_Label;
@@ -132,7 +132,7 @@ public class Hud implements Disposable {
         Berenjena_Score = 0;
         Pajaro_Score = 0;
         Foca_Score = 0;
-        Yeti_Score = 0;
+
         Hielo_Score = 0;
         Lechuga_Score2 = 0;
         Naranja_Score2 = 0;
@@ -140,7 +140,7 @@ public class Hud implements Disposable {
         Berenjena_Score2 = 0;
         Pajaro_Score2 = 0;
         Foca_Score2 = 0;
-        Yeti_Score2 = 0;
+
         Hielo_Score2 = 0;
         Brick_Score = 0;
         Brick_Score2 = 0;
@@ -165,7 +165,7 @@ public class Hud implements Disposable {
         Berenjena_Score_Label = new Label(String.format("%05d", Berenjena_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Pajaro_Score_Label = new Label(String.format("%05d", Pajaro_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Foca_Score_Label = new Label(String.format("%05d", Foca_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        Yeti_Score_Label = new Label(String.format("%05d", Yeti_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+
         Hielo_Score_Label = new Label(String.format("%05d", Hielo_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Lechuga_Score_Label2 = new Label(String.format("%05d", Lechuga_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Naranja_Score_Label2 = new Label(String.format("%05d", Naranja_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
@@ -173,7 +173,7 @@ public class Hud implements Disposable {
         Berenjena_Score_Label2 = new Label(String.format("%05d", Berenjena_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Pajaro_Score_Label2 = new Label(String.format("%05d", Pajaro_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Foca_Score_Label2 = new Label(String.format("%05d", Foca_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        Yeti_Score_Label2 = new Label(String.format("%05d", Yeti_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+
         Hielo_Score_Label2 = new Label(String.format("%05d", Hielo_Score2), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Total_Score_Lable1 = new Label(String.format("%06d", Popo_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Total_Score_Lable2 = new Label(String.format("%06d", Nana_Score), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
@@ -194,7 +194,7 @@ public class Hud implements Disposable {
         Berenjena_Label = new Label("BERENJENAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Pajaro_Label = new Label("PAJAROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Foca_Label = new Label("FOCAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        Yeti_Label = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+
         Hielo_Label = new Label("HIELOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Lechuga_Label2 = new Label("LECHUGAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Naranja_Label2 = new Label("NARANJAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
@@ -202,7 +202,7 @@ public class Hud implements Disposable {
         Berenjena_Label2 = new Label("BERENJENAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Pajaro_Label2 = new Label("PAJAROS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Foca_Label2 = new Label("FOCAS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        Yeti_Label2 = new Label("YETIS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+
         Hielo_Label2 = new Label("HIELOS", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Total = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         Total2 = new Label("TOTAL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
@@ -280,10 +280,6 @@ public class Hud implements Disposable {
             table.add(Foca_Score_Label).expandX().padTop(10);
 
             table.row();
-            table.add(Yeti_Label).expandX().padTop(10);
-            table.add(Yeti_Score_Label).expandX().padTop(10);
-
-            table.row();
             table.add(Hielo_Label).expandX().padTop(10);
             table.add(Hielo_Score_Label).expandX().padTop(10);
 
@@ -345,12 +341,6 @@ public class Hud implements Disposable {
             table.add(Hielo_Score_Label2).expandX().padTop(10);
 
             table.row();
-            table.add(Yeti_Label).expandX().padTop(10);
-            table.add(Yeti_Score_Label).expandX().padTop(10);
-            table.add(Yeti_Label2).expandX().padTop(10);
-            table.add(Yeti_Score_Label2).expandX().padTop(10);
-
-            table.row();
             table.add(Total).expandX().padTop(10);
             table.add(Popo_Score_Label).expandX().padTop(10);
             table.add(Total2).expandX().padTop(10);
@@ -384,9 +374,6 @@ public class Hud implements Disposable {
             }else if (type == Hielo.class) {
                 Hielo_Score += value;
                 Hielo_Score_Label.setText(String.format("%05d", Hielo_Score));
-            }else if (type == Yeti.class) {
-                Yeti_Score += value;
-                Yeti_Score_Label.setText(String.format("%05d", Yeti_Score));
             }else if (type == Brick.class) {
                 Brick_Score += value;
                 Brick_Score_Label.setText(String.format("%05d", Brick_Score));
@@ -413,9 +400,6 @@ public class Hud implements Disposable {
             } else if (type == Hielo.class) {
                 Hielo_Score2 += value;
                 Hielo_Score_Label2.setText(String.format("%05d", Hielo_Score2));
-            } else if (type == Yeti.class) {
-                Yeti_Score2 += value;
-                Yeti_Score_Label2.setText(String.format("%05d", Yeti_Score2));
             } else if (type == Brick.class) {
                 Brick_Score2 += value;
                 Brick_Score_Label2.setText(String.format("%05d", Brick_Score2));

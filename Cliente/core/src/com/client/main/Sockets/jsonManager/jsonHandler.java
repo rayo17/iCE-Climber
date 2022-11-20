@@ -42,20 +42,18 @@ public class jsonHandler {
                 }
             }
             if (items[0] == 1) {
-                gameScreen.spawnEnemy(new EnemyDef(new Vector2(10, items[2]), Yeti.class, facing));
-            } else if (items[0] == 2) {
                 gameScreen.spawnEnemy(new EnemyDef(new Vector2(10, items[2]), Pajaro.class, facing));
-            } else if (items[0] == 3) {
+            } else if (items[0] == 2) {
                 gameScreen.spawnEnemy(new EnemyDef(new Vector2(10, items[2]), Foca.class, facing));
-            } else if (items[0] == 4) {
+            } else if (items[0] == 3) {
                 gameScreen.spawnEnemy(new EnemyDef(new Vector2(10, items[2]), Hielo.class, facing));
-            } else if (items[0] == 5) {
+            } else if (items[0] == 4) {
                 gameScreen.spawnFruit(new FruitDef(new Vector2(items[1] / mainClient.PPM, items[2]/ mainClient.PPM), Banano.class));
-            } else if (items[0] == 6) {
+            } else if (items[0] == 5) {
                 gameScreen.spawnFruit(new FruitDef(new Vector2(items[1] / mainClient.PPM, items[2]/ mainClient.PPM), Naranja.class));
-            } else if (items[0] == 7) {
+            } else if (items[0] == 6) {
                 gameScreen.spawnFruit(new FruitDef(new Vector2(items[1] / mainClient.PPM, items[2] / mainClient.PPM), Lechugas.class));
-            } else if (items[0] == 8) {
+            } else if (items[0] == 7) {
                 gameScreen.spawnFruit(new FruitDef(new Vector2(items[1] / mainClient.PPM, items[2] / mainClient.PPM), Berenjenas.class));
             }
         }
