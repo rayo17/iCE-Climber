@@ -24,13 +24,6 @@ popo_jump_left
   orig: 94, 25
   offset: 0, 0
   index: -1
-bear_left
-  rotate: false
-  xy: 97, 1
-  size: 80, 35
-  orig: 80, 35
-  offset: 0, 0
-  index: -1
 popo_hammer_left
   rotate: false
   xy: 205, 34
@@ -45,7 +38,7 @@ nana_hammer_left
   orig: 75, 29
   offset: 0, 0
   index: -1
-popo_walk_left
+popoL
   rotate: false
   xy: 362, 38
   size: 75, 25
@@ -59,18 +52,11 @@ bird_left
   orig: 64, 19
   offset: 0, 0
   index: -1
-nana_walk_left
+nanaL
   rotate: false
   xy: 362, 13
   size: 75, 23
   orig: 75, 23
-  offset: 0, 0
-  index: -1
-yeti_left
-  rotate: false
-  xy: 179, 11
-  size: 79, 21
-  orig: 79, 21
   offset: 0, 0
   index: -1
 seal_left

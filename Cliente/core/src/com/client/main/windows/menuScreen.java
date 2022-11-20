@@ -2,6 +2,7 @@ package com.client.main.windows;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 
@@ -36,6 +37,8 @@ public class menuScreen implements Screen {
 
     Texture twoPlayer;
 
+    private Music music;
+
     public  menuScreen(mainClient game){
         this.game = game;
 
@@ -43,6 +46,11 @@ public class menuScreen implements Screen {
         onePlayer = new Texture("1playerGame.png");
         twoPlayer = new Texture("2playerGame.png");
         exitButton = new Texture("Exit.png");
+
+        // musica
+        music = mainClient.manager.get("audio/music/game_start.mp3", Music.class);
+        music.setLooping(false);
+        music.play();
     }
 
 
@@ -68,6 +76,7 @@ public class menuScreen implements Screen {
             if (Gdx.input.isTouched()) {
                 System.out.println("1");
                 players = 1;
+                game.setScreen(new GameScreen(game, false, true, players));
 
             }
         } else {
@@ -81,6 +90,7 @@ public class menuScreen implements Screen {
             if (Gdx.input.isTouched()) {
                 System.out.println("2");
                 players = 2;
+                game.setScreen(new GameScreen(game, false, true, players));
             }
         } else {
             game.batch.draw(twoPlayer, TWO_PLAYER_x,TWO_PLAYER_Y);

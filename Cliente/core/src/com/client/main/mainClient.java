@@ -2,6 +2,8 @@ package com.client.main;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.client.main.windows.menuScreen;
 
@@ -41,6 +43,10 @@ public class mainClient extends Game {
 
 		batch = new SpriteBatch();
 		manager = new AssetManager();
+		manager.load("audio/music/game_start.mp3", Music.class);
+		manager.load("audio/music/ice_climber.mp3", Music.class);
+		manager.load("audio/music/bonus_stage.mp3", Music.class);
+		manager.load("audio/sounds/breakblock.wav", Sound.class);
 		manager.finishLoading();
 		this.setScreen(new menuScreen(this));
 	}

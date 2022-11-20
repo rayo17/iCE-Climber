@@ -71,6 +71,8 @@ public class GameScreen implements Screen, Runnable {
 
     private TiledMap map;
 
+    private Pterodactyl teroFinal;
+
     private OrthogonalTiledMapRenderer renderer;
 
     //personajes
@@ -151,7 +153,7 @@ public class GameScreen implements Screen, Runnable {
 
         world.setContactListener(new WorldContactListener());
 
-        //teroFinal = new Pajaro(this, 760, true);
+        teroFinal = new Pterodactyl(this, 760, true);
     }
     /**
      * Funcion que crea los enemigos en el GameScreen.
@@ -171,10 +173,8 @@ public class GameScreen implements Screen, Runnable {
                 enemigos.add(new Pajaro(this, edef.pos.y, edef.facingLeft));
             } else if (edef.type == Foca.class) {
                 enemigos.add(new Foca(this, edef.pos.y, edef.facingLeft));
-            } else if (edef.type == Hielo.class) {
+            }/** else if (edef.type == Hielo.class) {
                 enemigos.add(new Hielo(this, edef.pos.y, edef.facingLeft));
-            } /**else if (edef.type == Yeti.class) {
-                enemigos.add(new Yeti(this, edef.pos.y, edef.facingLeft));
             }*/
         }
     }
