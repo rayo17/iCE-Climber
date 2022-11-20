@@ -151,7 +151,7 @@ public class GameScreen implements Screen, Runnable {
 
         world.setContactListener(new WorldContactListener());
 
-        //teroFinal = new Pterodactyl(this, 760, true);
+        //teroFinal = new Pajaro(this, 760, true);
     }
     /**
      * Funcion que crea los enemigos en el GameScreen.
