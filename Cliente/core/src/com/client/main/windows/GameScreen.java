@@ -38,8 +38,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class GameScreen implements Screen, Runnable {
 
     //ultimas variables
-    public static final float SPEED = 250;
-    public static final float ANIMATION_SPEED = 0.6f;
+    public static final float SPEED = 200;
+    public static final float ANIMATION_SPEED = 0.5f;
     public static final int PLAYER_PIXEL_WIDTH = 20;
     public static final int PLAYER_PIXEL_HEIGHT = 30;
 
@@ -142,6 +142,7 @@ public class GameScreen implements Screen, Runnable {
         //Lista de espera para los enemigos que se crearan
         enemiesToSpawn = new LinkedBlockingQueue<>();
         fruitsToSpawn = new LinkedBlockingQueue<>();
+        new B2WorldCreator(this);
 
         //Verifica la cantidad de jugadores
         if (this.characters == 1) {

@@ -15,7 +15,7 @@ public class mainClient extends Game {
 	public static final int HEIGHT = 1000;
 
 	//Dimenciones de la ventana de juego
-	public static final int GWIDTH = 300;
+	public static final int GWIDTH = 320;
 
 	public static final int GHEIGHT = 500;
 
