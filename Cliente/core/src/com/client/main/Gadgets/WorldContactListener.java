@@ -6,7 +6,7 @@ import com.client.main.Sprites.Enemies.Enemy;
 import com.client.main.Sprites.Elements.Fruit;
 import com.client.main.Sprites.Characters.Nana;
 import com.client.main.Sprites.Characters.Popo;
-//import com.client.main.Sprites.TileObjects.InteractiveTileObject;
+import com.client.main.Sprites.Items.Tiles;
 
 public class WorldContactListener implements ContactListener{
     @Override
